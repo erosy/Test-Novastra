@@ -62,5 +62,5 @@ LightingData.asset binary
 .so filter=lfs diff=lfs merge=lfs -text
 ArtifactDB filter=lfs diff=lfs merge=lfs -text
 dsymutil filter=lfs diff=lfs merge=lfs -text
-Thaumaturgy[[:space:]]Appraisals/Library/** filter=lfs diff=lfs merge=lfs -text
+Test[[:space:]]Novastra/Library/** filter=lfs diff=lfs merge=lfs -text
 
