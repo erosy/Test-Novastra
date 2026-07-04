@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686d8ffddef7f3548b1d1877795dafb4, type: 3}
+  m_Name: SimpleDamage
+  m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.SkillConfig
+  id: 66e4cba3c82341f5a2130d3ea8905926
+  skillName: 
+  actionSequence:
+  - rid: 3822200482803482848
+  - rid: 3822200482803482849
+  references:
+    version: 2
+    RefIds:
+    - rid: 3822200482803482848
+      type: {class: SkillAction_Damage, ns: NovastraTest, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        damageAmount: 0
+    - rid: 3822200482803482849
+      type: {class: SkillAction_Heal, ns: NovastraTest, asm: Assembly-CSharp}
+      data:
+        targetType: 0
+        healAmount: 0

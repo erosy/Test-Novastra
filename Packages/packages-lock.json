@@ -17,13 +17,11 @@
       },
       "hash": "11836003a5e2ffcb7715ecec7e1fbb9d9cdb5bb8"
     },
-    "com.eros-jagat.gamepangin-0.5.3": {
-      "version": "file:C:/Users/ejpul/Downloads/Gamepangin/com.eros-jagat.gamepangin-0.5.3-0.1.0.tgz",
+    "com.gamepangin.utoolkit": {
+      "version": "file:C:/Users/ejpul/Downloads/Gamepangin/com.gamepangin.utoolkit-0.5.3.tgz",
       "depth": 0,
       "source": "local-tarball",
-      "dependencies": {
-        "com.unity.test-framework": "1.6.0"
-      }
+      "dependencies": {}
     },
     "com.unity.2d.animation": {
       "version": "13.0.4",
