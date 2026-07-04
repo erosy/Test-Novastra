@@ -14,10 +14,14 @@ namespace NovastraTest
         [SerializeField] private GameObject unitPrefab;
         [SerializeField] private Sprite unitSprite;
 
-        [BoxGroup("Stats")]
+        [Header("Stat Properties")]
         [SerializeField] List<StatProperty> properties = new();
 
+        [Header("Skills")]
+        [SerializeField] List<SkillConfig> skills = new();
+
         public IReadOnlyList<StatProperty> Properties => properties;
+        public IReadOnlyList<SkillConfig> Skills => skills;
 
         private void OnNameChanged()
         {

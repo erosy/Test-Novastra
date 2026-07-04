@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4064514e34f47d41b44067bdcbf6c63, type: 3}
-  m_Name: Player-1
+  m_Name: Player-2
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.UnitConfig
-  id: unit-player-1
-  unitName: Player-1
+  id: unit-player-2
+  unitName: Player-2
   unitPrefab: {fileID: 0}
   unitSprite: {fileID: 0}
   properties:

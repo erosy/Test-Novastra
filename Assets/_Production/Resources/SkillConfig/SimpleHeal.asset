@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 686d8ffddef7f3548b1d1877795dafb4, type: 3}
-  m_Name: SimpleDamage
+  m_Name: SimpleHeal
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.SkillConfig
-  id: skill-simple-damage
-  skillName: SImple Damage
+  id: skill-simple-heal
+  skillName: SImple Heal
   actionSequence:
-  - rid: 3822200482803482848
+  - rid: 3822200482803482852
   references:
     version: 2
     RefIds:
-    - rid: 3822200482803482848
-      type: {class: SkillAction_Damage, ns: NovastraTest, asm: Assembly-CSharp}
+    - rid: 3822200482803482852
+      type: {class: SkillAction_Heal, ns: NovastraTest, asm: Assembly-CSharp}
       data:
         targetType: 0
-        damageAmount: 100
+        healAmount: 100
