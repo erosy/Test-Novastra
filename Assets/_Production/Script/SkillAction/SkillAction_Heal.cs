@@ -12,9 +12,13 @@ namespace NovastraTest
 
         public int HealAmount => healAmount;
 
-        public override void Execute()
+        public override void Execute(SkillExecutionContext context)
         {
             //do heal here.
+            foreach (var target in context.Targets)
+            {
+                OnHeal.Trigger(target, healAmount);
+            }
         }
     }
 }

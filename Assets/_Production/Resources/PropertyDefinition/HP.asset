@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HP
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.PropertyDefinition
   id: stat-hp
-  propertyName: HP
+  statType: 0
   description: 
   propertyType: 0

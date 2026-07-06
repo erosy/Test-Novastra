@@ -13,25 +13,14 @@ namespace NovastraTest
     [CreateAssetMenu(order = 0, fileName = "New Stat Property", menuName = "ScriptableObjects/Stat Property")]
     public class PropertyDefinition : DataDefinition<PropertyDefinition>
     {
-        [InlineButton("UpdateFilename"), OnValueChanged(nameof(OnNameChanged))]
-        public string propertyName;
+        [OnValueChanged(nameof(OnNameChanged))]
+        public StatType statType;
         public string description;
         public ItemPropertyType propertyType;
-
-#if UNITY_EDITOR
-        private void UpdateFilename()
-        {
-            string assetPath = AssetDatabase.GetAssetPath(this);
-            string newAssetPath = assetPath.Replace(name + ".asset", propertyName + ".asset");
-            AssetDatabase.RenameAsset(assetPath, propertyName);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-        }
-#endif
         
         private void OnNameChanged()
         {
-            var formattedString = propertyName.ToLower().Replace(" ", "-");
+            var formattedString = statType.ToString().ToLower().Replace(" ", "-");
             id = $"stat-{formattedString}";
         }
     }
@@ -43,6 +32,7 @@ namespace NovastraTest
         [SerializeField] private float propertyValue;
         [SerializeField] private string propertyString;
         
+        public PropertyDefinition Definition => definition;
         public string Id => definition.Id;
         public ItemPropertyType PropertyType => definition.propertyType;
 
@@ -132,5 +122,13 @@ namespace NovastraTest
                 PropertyChanged?.Invoke(this);
             }
         }
+    }
+
+    public enum StatType
+    {
+        Health,
+        Attack,
+        Defense,
+        Speed
     }
 }

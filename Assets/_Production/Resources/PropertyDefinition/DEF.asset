@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1b3a0c768571040b042e9b377b1c08, type: 3}
   m_Name: DEF
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.PropertyDefinition
-  id: stat-def
-  propertyName: DEF
+  id: stat-defense
+  statType: 2
   description: 
-  propertyType: 1
+  propertyType: 0

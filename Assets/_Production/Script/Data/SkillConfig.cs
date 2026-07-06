@@ -22,6 +22,15 @@ namespace NovastraTest
             var formattedString = skillName.ToLower().Replace(" ", "-");
             id = $"skill-{formattedString}";
         }
+
+        public void Execute(Unit caster, List<Unit> targets)
+        {
+            var context = new SkillExecutionContext(caster, targets, this);
+            foreach (var action in actionSequence)
+            {
+                action.Execute(context);
+            }
+        }
     }
 
     public enum SkillTargetType

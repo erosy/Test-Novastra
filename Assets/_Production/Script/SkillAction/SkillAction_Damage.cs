@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 
 namespace NovastraTest
@@ -12,9 +13,14 @@ namespace NovastraTest
 
         public int DamageAmount => damageAmount;
 
-        public override void Execute()
+        public override void Execute(SkillExecutionContext context)
         {
             //do damage here.
+            foreach (var target in context.Targets)
+            {
+                float finalDamage = Mathf.Max(1f, damageAmount + (damageAmount * context.Caster.Attack/100f));
+                OnTakeDamage.Trigger(target, finalDamage);
+            }
         }
     }
 }

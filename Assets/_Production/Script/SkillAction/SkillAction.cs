@@ -6,6 +6,6 @@ namespace NovastraTest
     [Serializable]
     public abstract class SkillAction
     {
-        public abstract void Execute();
+        public abstract void Execute(SkillExecutionContext context);
     }
 }
