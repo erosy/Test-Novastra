@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.SkillConfig
   id: skill-simple-heal
   skillName: SImple Heal
+  targetingType: 0
+  targetCount: 2
   actionSequence:
   - rid: 3822200482803482852
   references:

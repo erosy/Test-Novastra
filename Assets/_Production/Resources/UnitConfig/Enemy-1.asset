@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.UnitConfig
   id: unit-enemy-1
   unitName: Enemy-1
-  unitPrefab: {fileID: 0}
+  unitPrefab: {fileID: 5365601737411393520, guid: 9a6cada10f8e66241b444eb3d2b5b09e, type: 3}
   unitSprite: {fileID: 0}
   properties:
   - definition: {fileID: 11400000, guid: b2e700d5c5299bc4daf8cb8f5ba0148e, type: 2}
@@ -29,3 +29,4 @@ MonoBehaviour:
   - definition: {fileID: 11400000, guid: b22f80ba10915f94daf8a25fc263ff51, type: 2}
     propertyValue: 2
     propertyString: 
+  skills: []

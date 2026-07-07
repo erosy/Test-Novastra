@@ -8,6 +8,7 @@ namespace NovastraTest
 {
     public class Unit : MonoBehaviour
     {
+        public GameObject outline;
         public UnitConfig Config { get; private set; }
         public UnitFactionType Faction { get; private set; }
         public UnitHealth Health { get; private set; }
@@ -43,6 +44,8 @@ namespace NovastraTest
 
             var hp = config.Properties.FirstOrDefault(p => p.Definition.statType == StatType.Health)?.Float ?? 100f;
             Health.InitHealth(hp);
+
+            outline.SetActive(false);
         }
 
         [Button("Init Dummy")]
@@ -51,6 +54,11 @@ namespace NovastraTest
             if (!IsTestingDummy) return;
 
             Initialize(TestingDummyConfig, TestingDummyFaction);
+        }
+
+        public void SetOutlineActive(bool active)
+        {
+            outline.SetActive(active);
         }
 
     }

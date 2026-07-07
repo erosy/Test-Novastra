@@ -23,6 +23,8 @@ namespace NovastraTest
         public IReadOnlyList<StatProperty> Properties => properties;
         public IReadOnlyList<SkillConfig> Skills => skills;
 
+        public GameObject UnitPrefab => unitPrefab;
+
         private void OnNameChanged()
         {
             var formattedString = unitName.ToLower().Replace(" ", "-");
