@@ -22,6 +22,13 @@ namespace NovastraTest
         public float Speed { get; private set; }
         public bool IsAlive => Health.CurrentHealth > 0;
 
+        [Title("Debug")]
+        public bool IsTestingDummy;
+
+        [ShowIf("IsTestingDummy")]
+        public UnitConfig TestingDummyConfig;
+        public UnitFactionType TestingDummyFaction;
+
         public void Initialize(UnitConfig config, UnitFactionType faction)
         {
             Config = config;
@@ -36,6 +43,14 @@ namespace NovastraTest
 
             var hp = config.Properties.FirstOrDefault(p => p.Definition.statType == StatType.Health)?.Float ?? 100f;
             Health.InitHealth(hp);
+        }
+
+        [Button("Init Dummy")]
+        public void InitDummy()
+        {
+            if (!IsTestingDummy) return;
+
+            Initialize(TestingDummyConfig, TestingDummyFaction);
         }
 
     }
