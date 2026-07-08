@@ -57,13 +57,46 @@ namespace NovastraTest
                 : PlayerTeam.LivingUnits.ToList();
         }
 
+        public IReadOnlyList<Unit> GetFriendlyLivingUnits(Unit unit)
+        {
+            if (unit == null) return new List<Unit>();
+
+            return unit.Faction == UnitFactionType.Player
+                ? PlayerTeam.LivingUnits.ToList()
+                : EnemyTeam.LivingUnits.ToList();
+        }
+
         public IReadOnlyList<Unit> GetValidTargets(Unit caster, SkillConfig skill)
         {
-            if (caster == null || skill == null) return new List<Unit>();
+            List<Unit> candidates = new();
 
-            return skill.TargetingType == TargetingType.Self
-                ? new List<Unit> { caster }
-                : GetOpposingLivingUnits(caster);
+            if (caster == null || skill == null) return candidates;
+
+
+            switch (skill.TargetingType)
+            {
+                case TargetingType.Self:
+                    candidates.Add(caster);
+                    break;
+                default:
+                    switch (skill.FactionTarget)
+                    {
+                        case FactionTargetType.Player:
+                            candidates = (List<Unit>)GetFriendlyLivingUnits(caster);
+                            break;
+
+                        case FactionTargetType.Enemy:
+                            candidates = (List<Unit>)GetOpposingLivingUnits(caster);
+                            break;
+
+                        default:
+                            candidates = (List<Unit>)GetAllLivingUnits();
+                            break;
+                    }
+                    break;
+            }
+
+            return candidates;
         }
 
         public List<Unit> GetAllLivingUnits()
@@ -84,7 +117,7 @@ namespace NovastraTest
             switch (e.DeadUnit.Faction)
             {
                 case UnitFactionType.Enemy:
-                
+
                     if (!UnitExists(EnemyTeam))
                         SetState(BattleState.Victory);
                     break;

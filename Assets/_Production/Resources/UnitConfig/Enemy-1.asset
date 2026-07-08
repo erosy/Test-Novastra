@@ -31,3 +31,4 @@ MonoBehaviour:
     propertyString: 
   skills:
   - {fileID: 11400000, guid: 3940a85c3e87ca447815eb36942d7e44, type: 2}
+  - {fileID: 11400000, guid: 5d57e92bcd833aa4b90c633a2dd8f991, type: 2}

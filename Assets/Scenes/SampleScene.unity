@@ -179,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ad35be3dcaad949b9e99e5443c4a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.DummyBattlePreparation
-  turnManager: {fileID: 0}
   playerUnits:
   - {fileID: 11400000, guid: 18711205157b5cf4db710df6b58db07b, type: 2}
+  - {fileID: 11400000, guid: cd8ce6781a99eaa42a519cc51338ec91, type: 2}
   enemyUnits:
   - {fileID: 11400000, guid: d8ae5d5ff8c1b274db9e930834cc2bf3, type: 2}
   - {fileID: 11400000, guid: c3899a4585981af4e87e972e4131cccd, type: 2}
@@ -702,6 +702,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.BattleInputManager
   targetingManager: {fileID: 526660176}
+  selectSkill1Action: {fileID: 0}
+  selectSkill2Action: {fileID: 0}
+  previousTargetAction: {fileID: 0}
+  nextTargetAction: {fileID: 0}
+  confirmAction: {fileID: 0}
+  enemyTurnDelay: 0.75
+  afterActionDelay: 0.25
 --- !u!1 &835137012
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,10 @@ namespace NovastraTest
         [MinValue(2)]
         [SerializeField] private int targetCount = 2;
 
+        [SerializeField] private FactionTargetType factionTarget;
+
         public TargetingType TargetingType => targetingType;
+        public FactionTargetType FactionTarget => factionTarget;
         public int TargetCount => Math.Max(2, targetCount);
 
         private bool IsMultipleTargets => targetingType == TargetingType.MultipleTargets;
@@ -53,5 +56,12 @@ namespace NovastraTest
     {
         Caster,
         Target
+    }
+
+    public enum FactionTargetType
+    {
+        Player,
+        Enemy,
+        Both
     }
 }
