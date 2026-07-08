@@ -3,6 +3,7 @@ using System;
 
 namespace NovastraTest
 {
+    [Serializable]
     public class SkillAction_Heal : SkillAction
     {
 

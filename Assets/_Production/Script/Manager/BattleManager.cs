@@ -82,15 +82,15 @@ namespace NovastraTest
                     switch (skill.FactionTarget)
                     {
                         case FactionTargetType.Player:
-                            candidates = (List<Unit>)GetFriendlyLivingUnits(caster);
+                            candidates = GetFriendlyLivingUnits(caster).ToList();
                             break;
 
                         case FactionTargetType.Enemy:
-                            candidates = (List<Unit>)GetOpposingLivingUnits(caster);
+                            candidates = GetOpposingLivingUnits(caster).ToList();
                             break;
 
                         default:
-                            candidates = (List<Unit>)GetAllLivingUnits();
+                            candidates = GetAllLivingUnits().ToList();
                             break;
                     }
                     break;

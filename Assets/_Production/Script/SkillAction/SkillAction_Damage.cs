@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace NovastraTest
 {
+    [Serializable]
     public class SkillAction_Damage : SkillAction
     {
 
