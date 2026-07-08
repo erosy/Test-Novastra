@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Gamepangin;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ namespace NovastraTest
     {
         public GameObject outline;
         public UnitConfig Config { get; private set; }
+
+        [ShowInInspector, ReadOnly]
         public UnitFactionType Faction { get; private set; }
         public UnitHealth Health { get; private set; }
         public IReadOnlyList<SkillConfig> Skills => Config.Skills;
@@ -22,13 +25,6 @@ namespace NovastraTest
         [ShowInInspector, ReadOnly]
         public float Speed { get; private set; }
         public bool IsAlive => Health.CurrentHealth > 0;
-
-        [Title("Debug")]
-        public bool IsTestingDummy;
-
-        [ShowIf("IsTestingDummy")]
-        public UnitConfig TestingDummyConfig;
-        public UnitFactionType TestingDummyFaction;
 
         public void Initialize(UnitConfig config, UnitFactionType faction)
         {
@@ -45,21 +41,14 @@ namespace NovastraTest
             var hp = config.Properties.FirstOrDefault(p => p.Definition.statType == StatType.Health)?.Float ?? 100f;
             Health.InitHealth(hp);
 
-            outline.SetActive(false);
-        }
-
-        [Button("Init Dummy")]
-        public void InitDummy()
-        {
-            if (!IsTestingDummy) return;
-
-            Initialize(TestingDummyConfig, TestingDummyFaction);
+            SetOutlineActive(false);
         }
 
         public void SetOutlineActive(bool active)
         {
+            if (outline == null) return;
+
             outline.SetActive(active);
         }
-
     }
 }

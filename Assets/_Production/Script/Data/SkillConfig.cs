@@ -39,6 +39,9 @@ namespace NovastraTest
         public void Execute(Unit caster, List<Unit> targets)
         {
             var context = new SkillExecutionContext(caster, targets, this);
+
+            OnAttack.Trigger(caster, targets, this);
+
             foreach (var action in actionSequence)
             {
                 action.Execute(context);

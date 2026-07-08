@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.UnitHealth
   maxHealth: 100
-  healthText: {fileID: 0}
+  healthText: {fileID: 1211624927194197496}
 --- !u!1 &6951063466393479943
 GameObject:
   m_ObjectHideFlags: 0

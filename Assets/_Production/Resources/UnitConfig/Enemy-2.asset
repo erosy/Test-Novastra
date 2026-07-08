@@ -24,9 +24,10 @@ MonoBehaviour:
     propertyValue: 100
     propertyString: 
   - definition: {fileID: 11400000, guid: 58beb709da7b0e64a89139cda3944d44, type: 2}
-    propertyValue: 100
+    propertyValue: 200
     propertyString: 
   - definition: {fileID: 11400000, guid: b22f80ba10915f94daf8a25fc263ff51, type: 2}
-    propertyValue: 2
+    propertyValue: 1
     propertyString: 
-  skills: []
+  skills:
+  - {fileID: 11400000, guid: 3940a85c3e87ca447815eb36942d7e44, type: 2}

@@ -9,7 +9,6 @@ namespace NovastraTest
 {
     public class DummyBattlePreparation : MonoBehaviour
     {
-        [SerializeField] private BattleManager battleManager;
         [SerializeField] private List<UnitConfig> playerUnits;
         [SerializeField] private List<UnitConfig> enemyUnits;
         [SerializeField] private List<Transform> playerPositions;
@@ -20,7 +19,7 @@ namespace NovastraTest
         {
             for (int i = 0; i < playerUnits.Count; i++)
             {
-                if (i > playerPositions.Count) continue;
+                if (i >= playerPositions.Count) continue;
 
                 var unit = LeanPool.Spawn(playerUnits[i].UnitPrefab, playerPositions[i].position, Quaternion.identity);
 
@@ -28,12 +27,12 @@ namespace NovastraTest
 
                 unitComponent.Initialize(playerUnits[i], UnitFactionType.Player);
 
-                battleManager.RegisterUnit(unitComponent);
+                BattleManager.Instance.RegisterUnit(unitComponent);
             }
 
             for (int i = 0; i < enemyUnits.Count; i++)
             {
-                if (i > enemyPositions.Count) continue;
+                if (i >= enemyPositions.Count) continue;
 
                 var unit = LeanPool.Spawn(enemyUnits[i].UnitPrefab, enemyPositions[i].position, Quaternion.identity);
 
@@ -41,10 +40,11 @@ namespace NovastraTest
 
                 unitComponent.Initialize(enemyUnits[i], UnitFactionType.Enemy);
 
-                battleManager.RegisterUnit(unitComponent);
+                BattleManager.Instance.RegisterUnit(unitComponent);
             }
 
-            battleManager.SetState(BattleState.WaitingForInput);
+
+            BattleManager.Instance.SetState(BattleState.Setup);
         }
 
     }

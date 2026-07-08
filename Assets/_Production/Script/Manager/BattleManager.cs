@@ -1,19 +1,32 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Gamepangin;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace NovastraTest
 {
-    public class BattleManager : MonoBehaviour
+    public class BattleManager : Singleton<BattleManager>, IEventListener<OnDeath>
     {
         public BattleTeam PlayerTeam { get; private set; } = new BattleTeam(UnitFactionType.Player);
         public BattleTeam EnemyTeam { get; private set; } = new BattleTeam(UnitFactionType.Enemy);
         public BattleState CurrentState { get; private set; } = BattleState.Setup;
 
+        private void OnEnable()
+        {
+            this.EventStartListening<OnDeath>();
+        }
+
+        private void OnDisable()
+        {
+            this.EventStopListening<OnDeath>();
+        }
         public void SetState(BattleState state)
         {
             CurrentState = state;
+            Debug.Log("Change state into " + CurrentState.ToString());
+            OnChangeBattleState.Trigger(CurrentState);
         }
 
         public void RegisterUnit(Unit unit)
@@ -53,9 +66,39 @@ namespace NovastraTest
                 : GetOpposingLivingUnits(caster);
         }
 
+        public List<Unit> GetAllLivingUnits()
+        {
+            List<Unit> allUnits = new();
+            allUnits.AddRange(PlayerTeam.LivingUnits);
+            allUnits.AddRange(EnemyTeam.LivingUnits);
+            return allUnits;
+        }
+
         private BattleTeam GetTeam(UnitFactionType faction)
         {
             return faction == UnitFactionType.Player ? PlayerTeam : EnemyTeam;
         }
+
+        public void OnEvent(OnDeath e)
+        {
+            switch (e.DeadUnit.Faction)
+            {
+                case UnitFactionType.Enemy:
+                
+                    if (!UnitExists(EnemyTeam))
+                        SetState(BattleState.Victory);
+                    break;
+                case UnitFactionType.Player:
+                    if (!UnitExists(PlayerTeam))
+                        SetState(BattleState.Defeat);
+                    break;
+            }
+        }
+
+        private bool UnitExists(BattleTeam team)
+        {
+            return team.HasLivingUnits;
+        }
+
     }
 }

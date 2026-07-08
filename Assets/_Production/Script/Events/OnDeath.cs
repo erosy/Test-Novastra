@@ -5,18 +5,18 @@ namespace NovastraTest
 {
     public struct OnDeath
     {
-        public Unit Caster;
+        public Unit DeadUnit;
 
-        public OnDeath(Unit caster)
+        public OnDeath(Unit deadUnit)
         {
-            Caster = caster;
+            DeadUnit = deadUnit;
         }
 
         public static OnDeath onDeathEvent;
 
-        public static void Trigger(Unit caster)
+        public static void Trigger(Unit deadUnit)
         {
-            onDeathEvent = new OnDeath(caster);
+            onDeathEvent = new OnDeath(deadUnit);
             EventManager.TriggerEvent(onDeathEvent);
         }
     }

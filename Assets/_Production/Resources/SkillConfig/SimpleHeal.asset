@@ -24,5 +24,5 @@ MonoBehaviour:
     - rid: 3822200482803482852
       type: {class: SkillAction_Heal, ns: NovastraTest, asm: Assembly-CSharp}
       data:
-        targetType: 0
-        healAmount: 100
+        targetType: 1
+        healAmount: 10

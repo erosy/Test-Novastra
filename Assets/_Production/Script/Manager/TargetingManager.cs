@@ -20,6 +20,8 @@ namespace NovastraTest
 
         public void BeginTargeting(Unit caster, SkillConfig skill, IReadOnlyList<Unit> targetCandidates)
         {
+            OutlineTargets(false);
+
             Caster = caster;
             CurrentSkill = skill;
             selectedIndex = 0;
@@ -61,6 +63,8 @@ namespace NovastraTest
 
         public void ClearTargeting()
         {
+            OutlineTargets(false);
+
             Caster = null;
             CurrentSkill = null;
             selectedIndex = 0;
@@ -125,6 +129,8 @@ namespace NovastraTest
         {
             foreach (var target in selectedTargets)
             {
+                if (target == null) continue;
+
                 target.SetOutlineActive(active);
             }
         }

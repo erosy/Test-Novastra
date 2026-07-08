@@ -9,6 +9,7 @@ namespace NovastraTest
         [SerializeField] private UnitHealthText healthText;
 
         private float currentHealth;
+        private bool isDead;
 
         public float CurrentHealth => currentHealth;
 
@@ -33,25 +34,46 @@ namespace NovastraTest
         {
             maxHealth = health;
             currentHealth = maxHealth;
+            isDead = false;
+
+            if (healthText != null)
+            {
+                healthText.UpdateHealth(currentHealth);
+            }
         }
 
         public void TakeDamage(float damage)
         {
+            if (isDead) return;
+
             currentHealth -= damage;
-            if (currentHealth < 0)
+            if (currentHealth <= 0)
             {
                 currentHealth = 0;
+                isDead = true;
                 OnDeath.Trigger(GetComponent<Unit>());
             }
-            healthText.UpdateHealth(currentHealth);
+
+            if (healthText != null)
+            {
+                healthText.UpdateHealth(currentHealth);
+            }
+
             Debug.Log($"{gameObject.name} took {damage} damage. Remaining health: {currentHealth}");
         }
 
         public void Heal(float amount)
         {
+            if (isDead) return;
+
             currentHealth += amount;
             if (currentHealth > maxHealth) currentHealth = maxHealth;
-            healthText.UpdateHealth(currentHealth);
+
+            if (healthText != null)
+            {
+                healthText.UpdateHealth(currentHealth);
+            }
+
             Debug.Log($"{gameObject.name} healed {amount}. Current health: {currentHealth}");
         }
 

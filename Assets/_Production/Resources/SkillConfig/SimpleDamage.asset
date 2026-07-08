@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.SkillConfig
   id: skill-simple-damage
   skillName: SImple Damage
+  targetingType: 0
+  targetCount: 2
   actionSequence:
   - rid: 3822200482803482848
   references:
@@ -22,5 +24,5 @@ MonoBehaviour:
     - rid: 3822200482803482848
       type: {class: SkillAction_Damage, ns: NovastraTest, asm: Assembly-CSharp}
       data:
-        targetType: 0
-        damageAmount: 100
+        targetType: 1
+        damageAmount: 10
