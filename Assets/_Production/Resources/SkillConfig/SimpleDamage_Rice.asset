@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686d8ffddef7f3548b1d1877795dafb4, type: 3}
+  m_Name: SimpleDamage_Rice
+  m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.SkillConfig
+  id: skill-simple-damage
+  skillName: SImple Damage
+  targetingType: 0
+  targetCount: 2
+  factionTarget: 1
+  actionSequence:
+  - rid: 3822200597252145228
+  - rid: 3822200597252145231
+  - rid: 3822200482803482848
+  references:
+    version: 2
+    RefIds:
+    - rid: 3822200482803482848
+      type: {class: SkillAction_Damage, ns: NovastraTest, asm: Assembly-CSharp}
+      data:
+        targetType: 1
+        damageAmount: 10
+    - rid: 3822200597252145228
+      type: {class: SkillAction_AnimateOverride, ns: NovastraTest, asm: Assembly-CSharp}
+      data:
+        animationClip: {fileID: 7400000, guid: f4b69eaf508ba764d8e9d9446f5038a0, type: 2}
+        waitUntilFinish: 0
+    - rid: 3822200597252145231
+      type: {class: SkillAction_Wait, ns: NovastraTest, asm: Assembly-CSharp}
+      data:
+        duration: 4

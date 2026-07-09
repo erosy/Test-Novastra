@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4064514e34f47d41b44067bdcbf6c63, type: 3}
-  m_Name: Player-1
+  m_Name: Rice
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.UnitConfig
-  id: unit-player-1
-  unitName: Player-1
+  id: unit-enemy-1
+  unitName: Enemy-1
   unitPrefab: {fileID: 5365601737411393520, guid: 9a6cada10f8e66241b444eb3d2b5b09e, type: 3}
   unitSprite: {fileID: 0}
+  visualPrefab: {fileID: 9105524865248538980, guid: 4e7b48ed57e5255458f6fe5514aaacd4, type: 3}
+  visualLocalPosition: {x: -0.87, y: -2.03, z: 0}
+  visualLocalScale: {x: 4, y: 4, z: 2}
   properties:
   - definition: {fileID: 11400000, guid: b2e700d5c5299bc4daf8cb8f5ba0148e, type: 2}
     propertyValue: 100
@@ -27,8 +30,8 @@ MonoBehaviour:
     propertyValue: 100
     propertyString: 
   - definition: {fileID: 11400000, guid: b22f80ba10915f94daf8a25fc263ff51, type: 2}
-    propertyValue: 2
+    propertyValue: 1
     propertyString: 
   skills:
-  - {fileID: 11400000, guid: 3940a85c3e87ca447815eb36942d7e44, type: 2}
-  - {fileID: 11400000, guid: ed7225d45f2652443add2401c557900f, type: 2}
+  - {fileID: 11400000, guid: 3b54d0fa39ec2c546aa06e872f01676f, type: 2}
+  - {fileID: 11400000, guid: 5d57e92bcd833aa4b90c633a2dd8f991, type: 2}

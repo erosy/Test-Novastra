@@ -16,7 +16,7 @@ MonoBehaviour:
   skillName: SImple Heal
   targetingType: 0
   targetCount: 2
-  factionTarget: 1
+  factionTarget: 0
   actionSequence:
   - rid: 3822200482803482852
   references:

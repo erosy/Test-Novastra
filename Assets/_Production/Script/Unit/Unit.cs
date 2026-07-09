@@ -10,7 +10,10 @@ namespace NovastraTest
     public class Unit : MonoBehaviour
     {
         public GameObject outline;
+        [SerializeField] private UnitVisualController visualController;
+
         public UnitConfig Config { get; private set; }
+        public UnitVisualController VisualController => visualController;
 
         [ShowInInspector, ReadOnly]
         public UnitFactionType Faction { get; private set; }
@@ -40,6 +43,9 @@ namespace NovastraTest
 
             var hp = config.Properties.FirstOrDefault(p => p.Definition.statType == StatType.Health)?.Float ?? 100f;
             Health.InitHealth(hp);
+
+            visualController ??= GetComponent<UnitVisualController>();
+            visualController?.Initialize(this, config);
 
             SetOutlineActive(false);
         }

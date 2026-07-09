@@ -14,6 +14,12 @@ namespace NovastraTest
         [SerializeField] private GameObject unitPrefab;
         [SerializeField] private Sprite unitSprite;
 
+        [Title("Visual Settings")]
+        [AssetsOnly]
+        [SerializeField] private GameObject visualPrefab;
+        [SerializeField] private Vector3 visualLocalPosition;
+        [SerializeField] private Vector3 visualLocalScale = Vector3.one;
+
         [Header("Stat Properties")]
         [SerializeField] List<StatProperty> properties = new();
 
@@ -24,6 +30,9 @@ namespace NovastraTest
         public IReadOnlyList<SkillConfig> Skills => skills;
 
         public GameObject UnitPrefab => unitPrefab;
+        public GameObject VisualPrefab => visualPrefab;
+        public Vector3 VisualLocalPosition => visualLocalPosition;
+        public Vector3 VisualLocalScale => visualLocalScale;
 
         private void OnNameChanged()
         {

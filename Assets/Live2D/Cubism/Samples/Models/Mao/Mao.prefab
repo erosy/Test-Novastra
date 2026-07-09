@@ -74,18 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors:
-  - {fileID: 0}
+  - {fileID: 6169772259763356526}
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
   _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
@@ -184,9 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -937,7 +926,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00078
 --- !u!33 &4911035498143865907
 MeshFilter:
@@ -1351,7 +1340,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00045999998
 --- !u!33 &3361982546309702219
 MeshFilter:
@@ -1966,7 +1955,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00078999996
 --- !u!33 &6075592865005308456
 MeshFilter:
@@ -2242,7 +2231,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00022999999
 --- !u!33 &4073740967333799517
 MeshFilter:
@@ -2506,7 +2495,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00055
 --- !u!33 &3881117801467799480
 MeshFilter:
@@ -2644,7 +2633,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00131
 --- !u!33 &1868631439256080028
 MeshFilter:
@@ -2782,7 +2771,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00104
 --- !u!33 &650499973481498785
 MeshFilter:
@@ -2920,7 +2909,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00156
 --- !u!33 &8053033343198416446
 MeshFilter:
@@ -3393,12 +3382,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 5516552061321790392}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00068999996
 --- !u!33 &6743852289677157153
 MeshFilter:
@@ -3627,25 +3616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -4057,7 +4028,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00052
 --- !u!33 &4191140866812484187
 MeshFilter:
@@ -4597,7 +4568,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00143
 --- !u!33 &230662350920703115
 MeshFilter:
@@ -4751,25 +4722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -5055,7 +5008,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00018999999
 --- !u!33 &4312401101319737175
 MeshFilter:
@@ -5382,7 +5335,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00048
 --- !u!33 &626506027589070825
 MeshFilter:
@@ -5520,7 +5473,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0001
 --- !u!33 &4016839372113254003
 MeshFilter:
@@ -5934,7 +5887,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00148
 --- !u!33 &4226457894940886029
 MeshFilter:
@@ -6072,7 +6025,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00068
 --- !u!33 &5324533802283765458
 MeshFilter:
@@ -6210,7 +6163,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00147
 --- !u!33 &5980813334749947031
 MeshFilter:
@@ -7002,7 +6955,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00153
 --- !u!33 &1882679006776284212
 MeshFilter:
@@ -7266,7 +7219,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00010999999
 --- !u!33 &5694019015754143777
 MeshFilter:
@@ -7530,7 +7483,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00051
 --- !u!33 &8401693664580278615
 MeshFilter:
@@ -7668,7 +7621,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0013
 --- !u!33 &7649765962306332163
 MeshFilter:
@@ -7882,7 +7835,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00142
 --- !u!33 &7004542564625895723
 MeshFilter:
@@ -8083,7 +8036,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0014599999
 --- !u!33 &7397173754970423870
 MeshFilter:
@@ -8347,7 +8300,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0013199999
 --- !u!33 &6996516373352888332
 MeshFilter:
@@ -8623,7 +8576,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00087999995
 --- !u!33 &6934768297704881456
 MeshFilter:
@@ -8704,15 +8657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -8860,7 +8805,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00154
 --- !u!33 &5450604110547361531
 MeshFilter:
@@ -9199,7 +9144,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00157
 --- !u!33 &8629557390924563786
 MeshFilter:
@@ -9776,7 +9721,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00037
 --- !u!33 &837365993699225414
 MeshFilter:
@@ -9973,12 +9918,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 3440373192858521459}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00096
 --- !u!33 &8290148359365755127
 MeshFilter:
@@ -10179,7 +10124,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00124
 --- !u!33 &2936788609945732474
 MeshFilter:
@@ -10506,7 +10451,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00072999997
 --- !u!33 &7327559115911302273
 MeshFilter:
@@ -10770,7 +10715,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0014099999
 --- !u!33 &7410359425593825354
 MeshFilter:
@@ -10974,12 +10919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -11127,7 +11067,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0016
 --- !u!33 &9175010635708501183
 MeshFilter:
@@ -11406,12 +11346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -11622,7 +11557,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0008
 --- !u!33 &1732876185151320687
 MeshFilter:
@@ -11894,7 +11829,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 2
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -11993,29 +11928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors:
-  - {fileID: 0}
+  - {fileID: 3194991939132145275}
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
   _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
@@ -12314,23 +12229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -12478,7 +12377,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00101
 --- !u!33 &3919787889890440886
 MeshFilter:
@@ -12612,7 +12511,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 2
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -12751,17 +12650,17 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4579118809005121272}
+  - {fileID: 6751110639987628474}
+  - {fileID: 3089705064796415893}
+  - {fileID: 1138887282273037713}
+  - {fileID: 3266548827170873101}
+  - {fileID: 2053425576107476917}
   ColorBlendType: 2
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00055999996
 --- !u!33 &4028337485587564564
 MeshFilter:
@@ -12895,12 +12794,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 3440373192858521459}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00094
 --- !u!33 &1431690873033122004
 MeshFilter:
@@ -13290,7 +13189,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00035
 --- !u!33 &1244105168468268495
 MeshFilter:
@@ -13625,12 +13524,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 3440373192858521459}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00094999996
 --- !u!33 &7656723859875834719
 MeshFilter:
@@ -13831,7 +13730,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0015799999
 --- !u!33 &8640067113323305949
 MeshFilter:
@@ -13969,7 +13868,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0015199999
 --- !u!33 &4227579187507487012
 MeshFilter:
@@ -14107,7 +14006,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00039
 --- !u!33 &1937865491257117694
 MeshFilter:
@@ -14509,7 +14408,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00115
 --- !u!33 &6057958687866469749
 MeshFilter:
@@ -14647,7 +14546,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00032999998
 --- !u!33 &2622009682654802239
 MeshFilter:
@@ -14785,7 +14684,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00062
 --- !u!33 &1832184441990370237
 MeshFilter:
@@ -14923,7 +14822,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00029999999
 --- !u!33 &7433135093292325741
 MeshFilter:
@@ -15061,7 +14960,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00043999997
 --- !u!33 &2128886602744046293
 MeshFilter:
@@ -15199,7 +15098,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00114
 --- !u!33 &6963152272217836399
 MeshFilter:
@@ -15396,7 +15295,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 3440373192858521459}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -15677,7 +15576,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00159
 --- !u!33 &8996643718082471707
 MeshFilter:
@@ -15874,12 +15773,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 6482645215967369730}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0009
 --- !u!33 &8768552979024837059
 MeshFilter:
@@ -16013,12 +15912,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 5516552061321790392}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00071
 --- !u!33 &7493872756632257060
 MeshFilter:
@@ -16156,7 +16055,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00075
 --- !u!33 &6855670795738502821
 MeshFilter:
@@ -16233,11 +16132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -16385,7 +16280,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00134
 --- !u!33 &7049078084801430970
 MeshFilter:
@@ -17054,11 +16949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -17221,7 +17112,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00061
 --- !u!33 &5230170434410674017
 MeshFilter:
@@ -17635,7 +17526,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0002
 --- !u!33 &971307909407852788
 MeshFilter:
@@ -17710,9 +17601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -18124,7 +18013,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00026
 --- !u!33 &5185603512551765662
 MeshFilter:
@@ -18262,7 +18151,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00059
 --- !u!33 &3155809905374146889
 MeshFilter:
@@ -18396,7 +18285,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 6481747496744964088}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -18602,7 +18491,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0013799999
 --- !u!33 &8115630999926332101
 MeshFilter:
@@ -18820,14 +18709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -19038,7 +18920,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00054
 --- !u!33 &7678666179854178391
 MeshFilter:
@@ -19314,7 +19196,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00029
 --- !u!33 &2975295079622247866
 MeshFilter:
@@ -19590,7 +19472,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0010599999
 --- !u!33 &4997533526531900581
 MeshFilter:
@@ -20000,7 +19882,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -20139,22 +20021,22 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5299192281405648724}
+  - {fileID: 8667316251806487152}
+  - {fileID: 4579118809005121272}
+  - {fileID: 7073337245307081441}
+  - {fileID: 3266548827170873101}
+  - {fileID: 4220530174503624256}
+  - {fileID: 6950823771918609009}
+  - {fileID: 7345852495363203092}
+  - {fileID: 4974601841797080517}
+  - {fileID: 384461715160744793}
+  - {fileID: 6950823771918609009}
   ColorBlendType: 2
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00057
 --- !u!33 &3982817187295515281
 MeshFilter:
@@ -20556,9 +20438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -20769,7 +20649,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0009999999
 --- !u!33 &2842799154651933514
 MeshFilter:
@@ -21045,7 +20925,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0010899999
 --- !u!33 &8053866680423790026
 MeshFilter:
@@ -21309,7 +21189,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00008
 --- !u!33 &5599142188403135558
 MeshFilter:
@@ -21447,7 +21327,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00037999998
 --- !u!33 &4000641516779478774
 MeshFilter:
@@ -22062,7 +21942,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00027
 --- !u!33 &2595200605684833709
 MeshFilter:
@@ -22138,10 +22018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -22291,7 +22168,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0026
 --- !u!33 &2296710470651077740
 MeshFilter:
@@ -22672,12 +22549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -22777,9 +22649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -22927,7 +22797,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00087
 --- !u!33 &194239671245456918
 MeshFilter:
@@ -23065,7 +22935,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0013499999
 --- !u!33 &84301382831621455
 MeshFilter:
@@ -23404,7 +23274,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00102
 --- !u!33 &6463784277760482442
 MeshFilter:
@@ -23676,14 +23546,14 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
+  - {fileID: 1194077201591447927}
+  - {fileID: 2575020362408993728}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00064
 --- !u!33 &1097392999030279167
 MeshFilter:
@@ -23821,7 +23691,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00116
 --- !u!33 &8513880799003125794
 MeshFilter:
@@ -24170,19 +24040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -24267,9 +24125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -24746,7 +24602,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0026099999
 --- !u!33 &5790200500625331401
 MeshFilter:
@@ -24910,7 +24766,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00125
 --- !u!33 &4914971923631391486
 MeshFilter:
@@ -25048,7 +24904,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00145
 --- !u!33 &1681173140402879579
 MeshFilter:
@@ -25249,7 +25105,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00144
 --- !u!33 &7584208066354129159
 MeshFilter:
@@ -25387,7 +25243,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00036
 --- !u!33 &6084275275379319477
 MeshFilter:
@@ -25521,7 +25377,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 6482645215967369730}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -25664,7 +25520,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00118
 --- !u!33 &7129972757695626978
 MeshFilter:
@@ -25802,7 +25658,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00042
 --- !u!33 &840918768641485588
 MeshFilter:
@@ -25880,12 +25736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -26281,12 +26132,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 5239858681648715938}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0015
 --- !u!33 &4503211666509162252
 MeshFilter:
@@ -26487,7 +26338,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00024999998
 --- !u!33 &7984726681188653621
 MeshFilter:
@@ -27752,12 +27603,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00084999995
 --- !u!33 &7465979717943774739
 MeshFilter:
@@ -28171,7 +28022,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00045
 --- !u!33 &6405532450713638572
 MeshFilter:
@@ -28254,15 +28105,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1299922960820006264}
+  - {fileID: 4348587655085262154}
+  - {fileID: 4349782135383069233}
+  - {fileID: 1786460082739762697}
+  - {fileID: 2996632355188581312}
+  - {fileID: 8232226209512582170}
+  - {fileID: 3861232634952545542}
+  - {fileID: 8435544968150007122}
+  - {fileID: 1565478600966774470}
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -28749,7 +28600,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00006
 --- !u!33 &1025640414412961437
 MeshFilter:
@@ -28887,7 +28738,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00107
 --- !u!33 &6291317857406676798
 MeshFilter:
@@ -29088,7 +28939,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00136
 --- !u!33 &798401833794243177
 MeshFilter:
@@ -29364,7 +29215,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0011
 --- !u!33 &2588977133017689980
 MeshFilter:
@@ -30358,10 +30209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -31037,7 +30885,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00027999998
 --- !u!33 &704381910302847162
 MeshFilter:
@@ -31171,12 +31019,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00084
 --- !u!33 &5713782112998468760
 MeshFilter:
@@ -31689,16 +31537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -31846,7 +31685,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00059999997
 --- !u!33 &5259161507278971321
 MeshFilter:
@@ -31984,7 +31823,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00009
 --- !u!33 &632038035282554293
 MeshFilter:
@@ -32064,12 +31903,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8157963409178495212}
+  - {fileID: 8216297388514536045}
+  - {fileID: 6196309781925656859}
+  - {fileID: 4451689236936458191}
+  - {fileID: 2023241578611352958}
+  - {fileID: 2129531772100491291}
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -32217,7 +32056,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00016
 --- !u!33 &8598600480065125985
 MeshFilter:
@@ -32355,7 +32194,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0015499999
 --- !u!33 &5536415022426623332
 MeshFilter:
@@ -32489,7 +32328,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 6590104397661286735}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -32695,7 +32534,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00013999999
 --- !u!33 &7277174508988556960
 MeshFilter:
@@ -32896,7 +32735,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00021999999
 --- !u!33 &6278740988468198481
 MeshFilter:
@@ -33097,7 +32936,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00032
 --- !u!33 &4961166703860446796
 MeshFilter:
@@ -33235,7 +33074,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00012
 --- !u!33 &812117380648770467
 MeshFilter:
@@ -33507,7 +33346,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 6481747496744964088}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -33609,31 +33448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -33781,7 +33596,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00049
 --- !u!33 &200081833686551536
 MeshFilter:
@@ -33859,12 +33674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -34008,12 +33818,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0.3
   _masks:
-  - {fileID: 0}
+  - {fileID: 6482533298277359896}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0011999999
 --- !u!33 &8119653784295024174
 MeshFilter:
@@ -34151,7 +33961,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00014999999
 --- !u!33 &4014076431378216179
 MeshFilter:
@@ -34687,12 +34497,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 3440373192858521459}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00097
 --- !u!33 &351147400766633892
 MeshFilter:
@@ -34939,7 +34749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Live2D.Cubism::Live2D.Cubism.Rendering.CubismRenderController
   Opacity: 1
-  _lastOpacity: 0
+  _lastOpacity: 1
   _isOverriddenModelMultiplyColors: 0
   _isOverriddenModelScreenColors: 0
   _modelMultiplyColor: {r: 0, g: 0, b: 0, a: 0}
@@ -35327,7 +35137,7 @@ Animator:
   m_GameObject: {fileID: 7094949764238293956}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3fa36635ce85d248864c7eeaebb1b38, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -36465,12 +36275,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 5516552061321790392}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0007
 --- !u!33 &2466318239052618836
 MeshFilter:
@@ -36947,7 +36757,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00031
 --- !u!33 &5960822154618668171
 MeshFilter:
@@ -37085,7 +36895,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0012599999
 --- !u!33 &8535866706198118985
 MeshFilter:
@@ -37223,7 +37033,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00113
 --- !u!33 &3374183060137055024
 MeshFilter:
@@ -37499,7 +37309,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00058
 --- !u!33 &7681949119940589931
 MeshFilter:
@@ -37771,12 +37581,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 1693983468843950735}
   ColorBlendType: 2
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0014
 --- !u!33 &5102289977158039724
 MeshFilter:
@@ -37914,7 +37724,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00024
 --- !u!33 &4917485026645708008
 MeshFilter:
@@ -38253,7 +38063,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00047
 --- !u!33 &2039624377644896546
 MeshFilter:
@@ -38391,7 +38201,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00075999997
 --- !u!33 &8268647546502823723
 MeshFilter:
@@ -38592,7 +38402,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00074
 --- !u!33 &486160539147664051
 MeshFilter:
@@ -38828,32 +38638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -39349,12 +39134,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 6482645215967369730}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00088999997
 --- !u!33 &3793813245913967194
 MeshFilter:
@@ -39638,17 +39423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -39859,7 +39634,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00108
 --- !u!33 &4066773356809355349
 MeshFilter:
@@ -39997,7 +39772,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.000069999995
 --- !u!33 &8752877006413332832
 MeshFilter:
@@ -40273,7 +40048,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00005
 --- !u!33 &1011628513916178216
 MeshFilter:
@@ -40411,7 +40186,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00139
 --- !u!33 &3807925038734309781
 MeshFilter:
@@ -40951,7 +40726,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00099
 --- !u!33 &5247070961270523397
 MeshFilter:
@@ -41089,7 +40864,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00004
 --- !u!33 &875826943712620000
 MeshFilter:
@@ -41306,13 +41081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -41799,7 +41568,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00018
 --- !u!33 &8582994046171032244
 MeshFilter:
@@ -41937,7 +41706,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00021
 --- !u!33 &5017380934987034292
 MeshFilter:
@@ -42075,7 +41844,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0014899999
 --- !u!33 &8645731443035563905
 MeshFilter:
@@ -42209,12 +41978,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 2
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00067
 --- !u!33 &3586957145684179986
 MeshFilter:
@@ -42352,7 +42121,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0004
 --- !u!33 &7039568952140357030
 MeshFilter:
@@ -42624,23 +42393,23 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8247944435081073405}
+  - {fileID: 2738673481369311694}
+  - {fileID: 7822816562368485420}
+  - {fileID: 8766081354424187101}
+  - {fileID: 1301304315228214904}
+  - {fileID: 5199683035400590572}
+  - {fileID: 6814888350437921788}
+  - {fileID: 7856646365465756942}
+  - {fileID: 4460874192242480064}
+  - {fileID: 4177938956246183234}
+  - {fileID: 2081983721845277658}
+  - {fileID: 3206875104475136522}
   ColorBlendType: 2
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00128
 --- !u!33 &6192537829249177381
 MeshFilter:
@@ -42837,12 +42606,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00081999996
 --- !u!33 &4914547950797916017
 MeshFilter:
@@ -42980,7 +42749,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00111
 --- !u!33 &2575717240652487927
 MeshFilter:
@@ -43118,7 +42887,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00013
 --- !u!33 &8720661730545850140
 MeshFilter:
@@ -43252,12 +43021,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 5138696923689692417}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00077
 --- !u!33 &2106704637972389362
 MeshFilter:
@@ -43596,7 +43365,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00137
 --- !u!33 &2977983160284573961
 MeshFilter:
@@ -43730,12 +43499,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0.3
   _masks:
-  - {fileID: 0}
+  - {fileID: 7503697951815437954}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00122
 --- !u!33 &1217759634706079708
 MeshFilter:
@@ -44007,12 +43776,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0.3
   _masks:
-  - {fileID: 0}
+  - {fileID: 6482533298277359896}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00119
 --- !u!33 &357192580687502610
 MeshFilter:
@@ -44093,15 +43862,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors:
-  - {fileID: 0}
+  - {fileID: 3920817936868357829}
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
   _multiplyColor: {r: 1, g: 1, b: 1, a: 1}
@@ -44416,11 +44179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -44706,7 +44465,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00040999998
 --- !u!33 &8060790568401396110
 MeshFilter:
@@ -45108,7 +44867,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00049999997
 --- !u!33 &4704820168844509876
 MeshFilter:
@@ -45573,7 +45332,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00121
 --- !u!33 &1295255444430118018
 MeshFilter:
@@ -45711,7 +45470,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00034
 --- !u!33 &2521992006576298836
 MeshFilter:
@@ -45987,7 +45746,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00117
 --- !u!33 &5737761571964843729
 MeshFilter:
@@ -46125,7 +45884,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0012899999
 --- !u!33 &1331003595038693621
 MeshFilter:
@@ -46259,12 +46018,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0.3
   _masks:
-  - {fileID: 0}
+  - {fileID: 7503697951815437954}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0012299999
 --- !u!33 &4289468695065850417
 MeshFilter:
@@ -46398,12 +46157,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 6482645215967369730}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00091
 --- !u!33 &180137781249252660
 MeshFilter:
@@ -46675,12 +46434,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 6482645215967369730}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00091999996
 --- !u!33 &8499989085408252309
 MeshFilter:
@@ -47019,7 +46778,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0010299999
 --- !u!33 &5603915156250623404
 MeshFilter:
@@ -47220,7 +46979,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.0011199999
 --- !u!33 &6021275648418727514
 MeshFilter:
@@ -47354,12 +47113,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 1220396473488774066}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00133
 --- !u!33 &7883918624193132970
 MeshFilter:
@@ -47501,13 +47260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e5d11781244f449b6c9aa654a03100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _childDrawableRenderers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _childDrawableRenderers: []
   _childPartColorEditors: []
   _isOverriddenPartMultiplyColors: 0
   _isOverriddenPartScreenColors: 0
@@ -48116,7 +47869,7 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 0
   _masks:
-  - {fileID: 0}
+  - {fileID: 6590104397661286735}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
@@ -48259,7 +48012,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00052999996
 --- !u!33 &4291040138169030142
 MeshFilter:
@@ -48937,7 +48690,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00105
 --- !u!33 &7580280894730411464
 MeshFilter:
@@ -49075,7 +48828,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00127
 --- !u!33 &2973691270372856380
 MeshFilter:
@@ -49213,7 +48966,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00072
 --- !u!33 &1241069343190083954
 MeshFilter:
@@ -49548,12 +49301,12 @@ MonoBehaviour:
   _depthOffset: 0.00001
   _opacity: 1
   _masks:
-  - {fileID: 0}
+  - {fileID: 1902299704815871978}
   ColorBlendType: 0
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00083
 --- !u!33 &6945334809467678265
 MeshFilter:
@@ -49691,7 +49444,7 @@ MonoBehaviour:
   AlphaBlendType: 0
   DrawObjectType: 0
   _offsetScale: {x: 0, y: 0, z: 1, w: 1}
-  _quaternion: {x: 0, y: 0, z: 0, w: 2}
+  _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _zOffset: -0.00043
 --- !u!33 &3168334362238469552
 MeshFilter:

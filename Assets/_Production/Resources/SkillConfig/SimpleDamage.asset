@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686d8ffddef7f3548b1d1877795dafb4, type: 3}
   m_Name: SimpleDamage
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.SkillConfig
-  id: skill-simple-damage
-  skillName: SImple Damage
+  id: skill-simple-damage-natori
+  skillName: SImple Damage Natori
   targetingType: 0
   targetCount: 2
   factionTarget: 1
   actionSequence:
+  - rid: 3822200597252145228
+  - rid: 3822200597252145232
   - rid: 3822200482803482848
   references:
     version: 2
@@ -27,3 +29,12 @@ MonoBehaviour:
       data:
         targetType: 1
         damageAmount: 10
+    - rid: 3822200597252145228
+      type: {class: SkillAction_AnimateOverride, ns: NovastraTest, asm: Assembly-CSharp}
+      data:
+        animationClip: {fileID: 7400000, guid: 1e19eeaef5da51c409c704c48814fcbb, type: 2}
+        waitUntilFinish: 0
+    - rid: 3822200597252145232
+      type: {class: SkillAction_Wait, ns: NovastraTest, asm: Assembly-CSharp}
+      data:
+        duration: 2

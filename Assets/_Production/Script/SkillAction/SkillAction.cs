@@ -1,11 +1,11 @@
 using System;
-
+using System.Collections;
 
 namespace NovastraTest
 {
     [Serializable]
     public abstract class SkillAction
     {
-        public abstract void Execute(SkillExecutionContext context);
+        public abstract IEnumerator Execute(SkillExecutionContext context);
     }
 }

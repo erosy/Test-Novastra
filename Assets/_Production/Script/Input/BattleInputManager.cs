@@ -22,6 +22,7 @@ namespace NovastraTest
         private SkillConfig selectedSkill;
         private BattleState currentBattleState;
         private Coroutine enemyTurnRoutine;
+        private Coroutine skillExecutionRoutine;
         private Coroutine afterActionRoutine;
 
         private InputAction fallbackSelectSkill1Action;
@@ -51,6 +52,7 @@ namespace NovastraTest
         private void OnDisable()
         {
             StopEnemyTurnRoutine();
+            StopSkillExecutionRoutine();
             StopAfterActionRoutine();
 
             UnsubscribeInputActions();
@@ -312,6 +314,14 @@ namespace NovastraTest
             afterActionRoutine = null;
         }
 
+        private void StopSkillExecutionRoutine()
+        {
+            if (skillExecutionRoutine == null) return;
+
+            StopCoroutine(skillExecutionRoutine);
+            skillExecutionRoutine = null;
+        }
+
         private void ResolveTargeting()
         {
             if (selectedSkill == null)
@@ -324,11 +334,23 @@ namespace NovastraTest
             Unit caster = currentUnitInTurn;
             var targets = targetingManager.GetSelectedTargets();
             var isEnemyAction = caster != null && caster.Faction == UnitFactionType.Enemy;
-
-            selectedSkill.Execute(caster, targets);
+            var skillToExecute = selectedSkill;
 
             targetingManager.ClearTargeting();
             selectedSkill = null;
+
+            skillExecutionRoutine = StartCoroutine(
+                ExecuteSkillSequence(skillToExecute, caster, targets, isEnemyAction));
+        }
+
+        private IEnumerator ExecuteSkillSequence(
+            SkillConfig skill,
+            Unit caster,
+            System.Collections.Generic.List<Unit> targets,
+            bool isEnemyAction)
+        {
+            yield return skill.Execute(caster, targets);
+            skillExecutionRoutine = null;
 
             if (BattleManager.Instance.CurrentState != BattleState.Victory &&
                 BattleManager.Instance.CurrentState != BattleState.Defeat)
@@ -385,6 +407,7 @@ namespace NovastraTest
                 case BattleState.Victory:
                 case BattleState.Defeat:
                 StopEnemyTurnRoutine();
+                StopSkillExecutionRoutine();
                 StopAfterActionRoutine();
                 break;
 

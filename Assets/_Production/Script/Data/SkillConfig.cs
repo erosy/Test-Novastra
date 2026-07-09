@@ -1,5 +1,6 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using Gamepangin;
 using System;
@@ -39,7 +40,7 @@ namespace NovastraTest
             id = $"skill-{formattedString}";
         }
 
-        public void Execute(Unit caster, List<Unit> targets)
+        public IEnumerator Execute(Unit caster, List<Unit> targets)
         {
             var context = new SkillExecutionContext(caster, targets, this);
 
@@ -47,7 +48,13 @@ namespace NovastraTest
 
             foreach (var action in actionSequence)
             {
-                action.Execute(context);
+                if (action == null) continue;
+
+                var actionRoutine = action.Execute(context);
+                if (actionRoutine != null)
+                {
+                    yield return actionRoutine;
+                }
             }
         }
     }

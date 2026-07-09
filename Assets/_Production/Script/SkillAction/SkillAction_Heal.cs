@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections;
 
 namespace NovastraTest
 {
@@ -13,13 +13,14 @@ namespace NovastraTest
 
         public int HealAmount => healAmount;
 
-        public override void Execute(SkillExecutionContext context)
+        public override IEnumerator Execute(SkillExecutionContext context)
         {
-            //do heal here.
             foreach (var target in context.Targets)
             {
                 OnHeal.Trigger(target, healAmount);
             }
+
+            yield break;
         }
     }
 }
