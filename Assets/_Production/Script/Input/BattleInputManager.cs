@@ -243,14 +243,13 @@ namespace NovastraTest
         {
             Unit caster = currentUnitInTurn;
 
-            if (caster.Skills.Count == 0)
+            if (!TrySelectRandomEnemySkill(caster))
             {
                 enemyTurnRoutine = null;
                 BattleManager.Instance.SetState(BattleState.CheckingBattleEnd);
                 return;
             }
 
-            selectedSkill = caster.Skills[0];
             var targetCandidates = BattleManager.Instance.GetValidTargets(caster, selectedSkill);
 
             targetingManager.BeginTargeting(caster, selectedSkill, targetCandidates);
@@ -267,6 +266,29 @@ namespace NovastraTest
 
             enemyTurnRoutine = null;
             BattleManager.Instance.SetState(BattleState.ResolvingActions);
+        }
+
+        private bool TrySelectRandomEnemySkill(Unit caster)
+        {
+            selectedSkill = null;
+
+            if (caster == null) return false;
+
+            int validSkillCount = 0;
+
+            foreach (var skill in caster.Skills)
+            {
+                if (skill == null) continue;
+
+                validSkillCount++;
+
+                if (Random.Range(0, validSkillCount) == 0)
+                {
+                    selectedSkill = skill;
+                }
+            }
+
+            return selectedSkill != null;
         }
 
         private void StartEnemyTurnRoutine()
