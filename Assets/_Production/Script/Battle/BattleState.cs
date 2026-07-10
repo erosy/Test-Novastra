@@ -4,6 +4,7 @@ namespace NovastraTest
     {
         None,
         Setup,
+        VisualNovelPause,
         TurnStart,
         WaitingForInput,
         ResolvingActions,

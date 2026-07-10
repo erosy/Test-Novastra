@@ -16,7 +16,6 @@ namespace NovastraTest
         private static readonly int IdleState = Animator.StringToHash("Idle");
         private static readonly int HitState = Animator.StringToHash("Hit");
         private static readonly int DeathState = Animator.StringToHash("Death");
-        private const float StateTransitionDuration = 0.1f;
 
         [Title("Visual References")]
         [SerializeField] private Transform visualAnchor;
@@ -158,7 +157,15 @@ namespace NovastraTest
 
             if (currentVisual == null) return;
 
-            LeanPool.Despawn(currentVisual);
+            if (LeanPool.Links.TryGetValue(currentVisual, out var pool) && pool != null)
+            {
+                LeanPool.Despawn(currentVisual);
+            }
+            else
+            {
+                Destroy(currentVisual);
+            }
+
             currentVisual = null;
         }
 
@@ -245,7 +252,10 @@ namespace NovastraTest
         {
             if (modelAnimator == null || modelAnimator.runtimeAnimatorController == null) return;
 
-            modelAnimator.CrossFadeInFixedTime(stateHash, StateTransitionDuration, 0);
+            // Cubism pose clips animate mutually exclusive part opacities. Mecanim
+            // crossfades blend those curves and can show several arm variants at once.
+            // Switch states immediately and let CubismPoseController handle pose fading.
+            modelAnimator.Play(stateHash, 0, 0f);
         }
 
         private void SyncCubismWorldTransform()

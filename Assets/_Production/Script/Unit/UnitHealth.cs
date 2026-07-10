@@ -12,6 +12,8 @@ namespace NovastraTest
         private bool isDead;
 
         public float CurrentHealth => currentHealth;
+        public float MaxHealth => maxHealth;
+        public float NormalizedHealth => maxHealth > 0f ? currentHealth / maxHealth : 0f;
 
         private void Awake()
         {

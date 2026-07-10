@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Gamepangin;
+using Lean.Pool;
+using Naninovel;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -9,9 +11,23 @@ namespace NovastraTest
 {
     public class BattleManager : Singleton<BattleManager>, IEventListener<OnDeath>
     {
+        [Title("Dummy Player Unit System")]
+        [SerializeField] private List<UnitConfig> playerUnits;
+
+        [Title("Battle Config")]
+        public BattleConfig battleConfig;
+
+        [Title("Positioning Hooks")]
+        [SerializeField] private List<GameObjectHookData> playerPositions;
+        [SerializeField] private List<GameObjectHookData> enemyPositions;
+        protected override bool IsPersistBetweenScenes => false;
+
         public BattleTeam PlayerTeam { get; private set; } = new BattleTeam(UnitFactionType.Player);
         public BattleTeam EnemyTeam { get; private set; } = new BattleTeam(UnitFactionType.Enemy);
         public BattleState CurrentState { get; private set; } = BattleState.Setup;
+
+        public bool HasVNScriptBeforePlay => battleConfig.ScriptExists;
+        public Script BattleStartingScript => battleConfig.StartingScript;
 
         private void OnEnable()
         {
@@ -131,6 +147,37 @@ namespace NovastraTest
         private bool UnitExists(BattleTeam team)
         {
             return team.HasLivingUnits;
+        }
+
+        public void SetupBattle()
+        {
+            for (int i = 0; i < playerUnits.Count; i++)
+            {
+                if (i >= playerPositions.Count) continue;
+
+                var unit = LeanPool.Spawn(playerUnits[i].UnitPrefab, playerPositions[i].Reference.transform.position, Quaternion.identity);
+
+                var unitComponent = unit.GetComponent<Unit>();
+
+                unitComponent.Initialize(playerUnits[i], UnitFactionType.Player);
+
+                RegisterUnit(unitComponent);
+            }
+
+            for (int i = 0; i < battleConfig.EnemyConfigs.Count; i++)
+            {
+                if (i >= enemyPositions.Count) continue;
+
+                var unit = LeanPool.Spawn(battleConfig.EnemyConfigs[i].UnitPrefab, enemyPositions[i].Reference.transform.position, Quaternion.identity);
+
+                var unitComponent = unit.GetComponent<Unit>();
+
+                unitComponent.Initialize(battleConfig.EnemyConfigs[i], UnitFactionType.Enemy);
+
+                RegisterUnit(unitComponent);
+            }
+
+            SetState(BattleState.Setup);
         }
 
     }

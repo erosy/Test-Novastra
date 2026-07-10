@@ -82,8 +82,15 @@ namespace NovastraTest
                 timeline.Add(unitTimeline);
             }
 
-            BattleManager.Instance.SetState(BattleState.TurnStart);
+            if (BattleManager.Instance.HasVNScriptBeforePlay)
+            {
+                BattleManager.Instance.SetState(BattleState.VisualNovelPause);
+            }
 
+            else
+            {
+                BattleManager.Instance.SetState(BattleState.TurnStart);
+            }
         }
 
         public void EndCurrentTurn()
