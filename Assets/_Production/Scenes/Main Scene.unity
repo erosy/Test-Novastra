@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 409004592}
   - component: {fileID: 409004591}
   m_Layer: 0
-  m_Name: BattleManager
+  m_Name: BattleManager (SETUP HERE)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.BattleManager
   playerUnits:
   - {fileID: 11400000, guid: 18711205157b5cf4db710df6b58db07b, type: 2}
+  - {fileID: 11400000, guid: cd8ce6781a99eaa42a519cc51338ec91, type: 2}
   battleConfig: {fileID: 11400000, guid: 1fde36b671e2f8045aaa90ed10bfa381, type: 2}
   playerPositions:
   - {fileID: 11400000, guid: 6f9de115d9b8b6e469ad92ef3f8488b7, type: 2}

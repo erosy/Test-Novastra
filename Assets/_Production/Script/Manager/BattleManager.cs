@@ -31,6 +31,8 @@ namespace NovastraTest
         public Script PendingVisualNovelScript { get; private set; }
         public BattleState VisualNovelResumeState { get; private set; } = BattleState.TurnStart;
 
+        private bool hasSetupBattle;
+
         protected override void Awake()
         {
             base.Awake();
@@ -39,6 +41,11 @@ namespace NovastraTest
             {
                 gameObject.AddComponent<BattleVisualNovelCoordinator>();
             }
+        }
+
+        private void Start()
+        {
+            SetupBattle();
         }
 
         private void OnEnable()
@@ -185,6 +192,10 @@ namespace NovastraTest
 
         public void SetupBattle()
         {
+            if (hasSetupBattle) return;
+
+            hasSetupBattle = true;
+
             for (int i = 0; i < playerUnits.Count; i++)
             {
                 if (i >= playerPositions.Count) continue;
