@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 84231077}
+  - component: {fileID: 84231078}
   m_Layer: 0
   m_Name: Position 3
   m_TagString: Untagged
@@ -150,6 +151,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1147733833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84231078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84231076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ed41d7c3b741c47a9f0987b56d8838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gamepangin.Runtime::Gamepangin.GameObjectHook
+  reference: {fileID: 84231076}
+  hookData: {fileID: 11400000, guid: 06d32f4963d55ed48aadee133eb317de, type: 2}
 --- !u!1 &124011919
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,9 +287,15 @@ MonoBehaviour:
   playerUnits:
   - {fileID: 11400000, guid: 18711205157b5cf4db710df6b58db07b, type: 2}
   - {fileID: 11400000, guid: cd8ce6781a99eaa42a519cc51338ec91, type: 2}
-  battleConfig: {fileID: 0}
-  playerPositions: []
-  enemyPositions: []
+  battleConfig: {fileID: 11400000, guid: 1fde36b671e2f8045aaa90ed10bfa381, type: 2}
+  playerPositions:
+  - {fileID: 11400000, guid: 6f9de115d9b8b6e469ad92ef3f8488b7, type: 2}
+  - {fileID: 11400000, guid: 1ac35091fba198641abc2f9c94bc7f60, type: 2}
+  - {fileID: 11400000, guid: 2b9c60653a65da14fb75f289e01c595a, type: 2}
+  enemyPositions:
+  - {fileID: 11400000, guid: 67989ec939b202f4f8404572f5897569, type: 2}
+  - {fileID: 11400000, guid: d20b3e1882708b04f830765b2a36ad18, type: 2}
+  - {fileID: 11400000, guid: 06d32f4963d55ed48aadee133eb317de, type: 2}
 --- !u!4 &409004592
 Transform:
   m_ObjectHideFlags: 0
@@ -299,6 +320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 413666106}
+  - component: {fileID: 413666107}
   m_Layer: 0
   m_Name: Position 1
   m_TagString: Untagged
@@ -321,6 +343,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 846069067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &413666107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413666105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ed41d7c3b741c47a9f0987b56d8838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gamepangin.Runtime::Gamepangin.GameObjectHook
+  reference: {fileID: 413666105}
+  hookData: {fileID: 11400000, guid: 6f9de115d9b8b6e469ad92ef3f8488b7, type: 2}
 --- !u!1 &492470464
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492470465}
+  - component: {fileID: 492470466}
   m_Layer: 0
   m_Name: Position 3
   m_TagString: Untagged
@@ -352,6 +389,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 846069067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492470466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492470464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ed41d7c3b741c47a9f0987b56d8838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gamepangin.Runtime::Gamepangin.GameObjectHook
+  reference: {fileID: 492470464}
+  hookData: {fileID: 11400000, guid: 2b9c60653a65da14fb75f289e01c595a, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835137013}
+  - component: {fileID: 835137014}
   m_Layer: 0
   m_Name: Position 2
   m_TagString: Untagged
@@ -793,6 +845,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 846069067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &835137014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835137012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ed41d7c3b741c47a9f0987b56d8838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gamepangin.Runtime::Gamepangin.GameObjectHook
+  reference: {fileID: 835137012}
+  hookData: {fileID: 11400000, guid: 1ac35091fba198641abc2f9c94bc7f60, type: 2}
 --- !u!1 &846069066
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1051917972}
+  - component: {fileID: 1051917973}
   m_Layer: 0
   m_Name: Position 1
   m_TagString: Untagged
@@ -858,6 +925,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1147733833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051917973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051917971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ed41d7c3b741c47a9f0987b56d8838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gamepangin.Runtime::Gamepangin.GameObjectHook
+  reference: {fileID: 1051917971}
+  hookData: {fileID: 11400000, guid: 67989ec939b202f4f8404572f5897569, type: 2}
 --- !u!1 &1145905024
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145905025}
+  - component: {fileID: 1145905026}
   m_Layer: 0
   m_Name: Position 2
   m_TagString: Untagged
@@ -889,6 +971,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1147733833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1145905026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145905024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ed41d7c3b741c47a9f0987b56d8838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gamepangin.Runtime::Gamepangin.GameObjectHook
+  reference: {fileID: 1145905024}
+  hookData: {fileID: 11400000, guid: d20b3e1882708b04f830765b2a36ad18, type: 2}
 --- !u!1 &1147733832
 GameObject:
   m_ObjectHideFlags: 0

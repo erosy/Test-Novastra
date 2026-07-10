@@ -149,3 +149,5 @@ MonoBehaviour:
     - name: _Production/NaninovelScript/TestScript
       pathPrefix: Scripts
       guid: c243e28bc12bf2b499fc655e4093bb37
+  - Id: Audio
+    Resources: []

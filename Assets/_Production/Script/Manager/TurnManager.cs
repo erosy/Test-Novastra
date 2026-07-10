@@ -84,7 +84,7 @@ namespace NovastraTest
 
             if (BattleManager.Instance.HasVNScriptBeforePlay)
             {
-                BattleManager.Instance.SetState(BattleState.VisualNovelPause);
+                BattleManager.Instance.RequestVisualNovelPause(BattleManager.Instance.BattleStartingScript);
             }
 
             else

@@ -26,8 +26,20 @@ namespace NovastraTest
         public BattleTeam EnemyTeam { get; private set; } = new BattleTeam(UnitFactionType.Enemy);
         public BattleState CurrentState { get; private set; } = BattleState.Setup;
 
-        public bool HasVNScriptBeforePlay => battleConfig.ScriptExists;
-        public Script BattleStartingScript => battleConfig.StartingScript;
+        public bool HasVNScriptBeforePlay => battleConfig != null && battleConfig.ScriptExists && battleConfig.StartingScript != null;
+        public Script BattleStartingScript => battleConfig != null ? battleConfig.StartingScript : null;
+        public Script PendingVisualNovelScript { get; private set; }
+        public BattleState VisualNovelResumeState { get; private set; } = BattleState.TurnStart;
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            if (GetComponent<BattleVisualNovelCoordinator>() == null)
+            {
+                gameObject.AddComponent<BattleVisualNovelCoordinator>();
+            }
+        }
 
         private void OnEnable()
         {
@@ -43,6 +55,26 @@ namespace NovastraTest
             CurrentState = state;
             Debug.Log("Change state into " + CurrentState.ToString());
             OnChangeBattleState.Trigger(CurrentState);
+        }
+
+        public void RequestVisualNovelPause(Script script, BattleState resumeState = BattleState.TurnStart)
+        {
+            if (script == null)
+            {
+                Debug.LogWarning("Visual novel pause requested without a script. Resuming battle flow.");
+                SetState(resumeState);
+                return;
+            }
+
+            PendingVisualNovelScript = script;
+            VisualNovelResumeState = resumeState;
+            SetState(BattleState.VisualNovelPause);
+        }
+
+        public void ClearVisualNovelPauseRequest()
+        {
+            PendingVisualNovelScript = null;
+            VisualNovelResumeState = BattleState.TurnStart;
         }
 
         public void RegisterUnit(Unit unit)
@@ -148,6 +180,8 @@ namespace NovastraTest
         {
             return team.HasLivingUnits;
         }
+
+        [Button]
 
         public void SetupBattle()
         {

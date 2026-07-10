@@ -1,36 +1,21 @@
+using System;
 using Gamepangin;
-using UnityEngine;
 using Naninovel;
-using Naninovel.UI;
 using Naninovel.Commands;
-using UnityEngine.SceneManagement;
+using Naninovel.UI;
+using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 namespace NovastraTest
 {
-    public class VNHandler : Singleton<VNHandler>, IEventListener<OnChangeBattleState>
+    public class VNHandler : Singleton<VNHandler>
     {
-        private ICameraManager _cameraManager;
-        private IStateManager _stateManager;
-        private IUIManager _uiManager;
-        private ICustomVariableManager _customVariableManager;
-        private IScriptPlayer _scriptPlayer;
-        private IScriptManager _scriptManager;
-        private CameraConfiguration _cameraConfiguration;
-        private IScriptLoader _scriptLoader;
-
-        [SerializeField] private Script startingScript;
-        [SerializeField] private Camera vnCamera;
-
-        void OnEnable()
-        {
-            this.EventStartListening<OnChangeBattleState>();
-        }
-
-        void ODisable()
-        {
-            this.EventStopListening<OnChangeBattleState>();
-        }
+        private ICameraManager cameraManager;
+        private CameraConfiguration cameraConfiguration;
+        private IStateManager stateManager;
+        private IUIManager uiManager;
+        private IScriptPlayer scriptPlayer;
+        private Camera battleCamera;
 
         protected override void Awake()
         {
@@ -45,16 +30,12 @@ namespace NovastraTest
             base.OnDestroy();
         }
 
-        //TO DO:: only activate VN when enter new state (VN Pause)
-
-        private void StartVisualNovel(Script vnScript)
+        public async UniTask PlayAsync(Script requestedScript, Camera baseCamera)
         {
-            StartVisualNovelAsync(vnScript).Forget();
-        }
-
-        private async UniTaskVoid StartVisualNovelAsync(Script requestedScript)
-        {
-            if (requestedScript == null) return;
+            if (requestedScript == null)
+            {
+                throw new ArgumentNullException(nameof(requestedScript));
+            }
 
             if (!Engine.Initialized)
             {
@@ -62,94 +43,88 @@ namespace NovastraTest
             }
 
             CheckDependencies();
+            battleCamera = baseCamera != null ? baseCamera : Camera.main;
             SetupCameraState();
             SetupUIState();
 
-            await _scriptPlayer.LoadAndPlay(requestedScript.Path);
+            var scriptPath = requestedScript.Path;
+            var playbackStopped = new UniTaskCompletionSource();
+
+            void HandleStop(Script stoppedScript)
+            {
+                if (stoppedScript == null || stoppedScript.Path == scriptPath)
+                {
+                    playbackStopped.TrySetResult();
+                }
+            }
+
+            scriptPlayer.OnStop += HandleStop;
+
+            try
+            {
+                await scriptPlayer.LoadAndPlay(scriptPath);
+
+                if (scriptPlayer.Playing)
+                {
+                    await playbackStopped.Task;
+                }
+            }
+            finally
+            {
+                scriptPlayer.OnStop -= HandleStop;
+                await EndVisualNovelAsync();
+            }
         }
 
-        public async UniTask EndVisualNovelAsync(AsyncToken asyncToken = default, bool resetState = true, bool additive = true)
+        public async UniTask EndVisualNovelAsync(AsyncToken asyncToken = default, bool resetState = true)
         {
             CheckDependencies();
 
-            _scriptPlayer.Stop();
-
-            // hide visual novel dialogue printer
-            var hidePrinter = new HidePrinter();
-            hidePrinter.Execute(asyncToken).Forget();
-
-            // clear visual novel backlog
-            var clearBacklog = new ClearBacklog();
-            clearBacklog.Execute(asyncToken).Forget();
-
-            // resets engine services and unloads unused assets
-            if (resetState)
+            if (scriptPlayer.Playing)
             {
-                await _stateManager.ResetState();
-                ResetCameraState();
-                ResetUIState();
+                scriptPlayer.Stop();
             }
 
-            if (BattleManager.Instance.CurrentState == BattleState.VisualNovelPause)
+            try
             {
-                BattleManager.Instance.SetState(BattleState.TurnStart);
+                var hidePrinter = new HidePrinter();
+                await hidePrinter.Execute(asyncToken);
+
+                var clearBacklog = new ClearBacklog();
+                await clearBacklog.Execute(asyncToken);
+
+            }
+            finally
+            {
+                ResetCameraState();
+                ResetUIState();
+                battleCamera = null;
+            }
+
+            if (resetState)
+            {
+                await stateManager.ResetState();
             }
         }
 
         private void CheckDependencies()
         {
-            if (_cameraManager == null)
-            {
-                _cameraManager = Engine.GetService<ICameraManager>();
-            }
-
-            if (_cameraConfiguration == null)
-            {
-                _cameraConfiguration = Engine.GetConfiguration<CameraConfiguration>();
-            }
-
-            if (_stateManager == null)
-            {
-                _stateManager = Engine.GetService<IStateManager>();
-            }
-
-            if (_uiManager == null)
-            {
-                _uiManager = Engine.GetService<IUIManager>();
-            }
-
-            if (_customVariableManager == null)
-            {
-                _customVariableManager = Engine.GetService<ICustomVariableManager>();
-            }
-
-            if (_scriptPlayer == null)
-            {
-                _scriptPlayer = Engine.GetService<IScriptPlayer>();
-            }
-
-            if (_scriptLoader == null)
-            {
-                _scriptLoader = Engine.GetService<IScriptLoader>();
-            }
+            cameraManager ??= Engine.GetService<ICameraManager>();
+            cameraConfiguration ??= Engine.GetConfiguration<CameraConfiguration>();
+            stateManager ??= Engine.GetService<IStateManager>();
+            uiManager ??= Engine.GetService<IUIManager>();
+            scriptPlayer ??= Engine.GetService<IScriptPlayer>();
         }
-
-        #region  UI Settings
 
         private void SetupUIState()
         {
-            _uiManager.GetUI<ContinueInputUI>()?.Show();
+            uiManager.GetUI<ContinueInputUI>()?.Show();
         }
-
 
         private void ResetUIState()
         {
-            _uiManager.GetUI<ContinueInputUI>()?.Hide();
+            uiManager.GetUI<ContinueInputUI>()?.Hide();
         }
-
-        #endregion
-
-        #region  VN Camera Settings
 
         private void SetupVisualNovelCamera()
         {
@@ -161,52 +136,69 @@ namespace NovastraTest
         {
             SetEnableVisualNovelCamera(true);
 
-            var mainCameraStack = GetMainCameraData().cameraStack;
-
-            if (!mainCameraStack.Contains(_cameraManager.Camera))
+            var mainCameraData = GetBattleCameraData();
+            if (mainCameraData == null)
             {
-                mainCameraStack.Add(_cameraManager.Camera);
+                return;
             }
 
-            if (_cameraConfiguration.UseUICamera && !mainCameraStack.Contains(_cameraManager.UICamera))
+            var mainCameraStack = mainCameraData.cameraStack;
+            RemoveInvalidStackCameras(mainCameraStack);
+
+            if (cameraManager.Camera != null &&
+                cameraManager.Camera != battleCamera &&
+                !mainCameraStack.Contains(cameraManager.Camera))
             {
-                mainCameraStack.Add(_cameraManager.UICamera);
+                mainCameraStack.Add(cameraManager.Camera);
+            }
+
+            if (cameraConfiguration.UseUICamera &&
+                cameraManager.UICamera != null &&
+                cameraManager.UICamera != battleCamera &&
+                !mainCameraStack.Contains(cameraManager.UICamera))
+            {
+                mainCameraStack.Add(cameraManager.UICamera);
             }
         }
 
-        private UniversalAdditionalCameraData GetMainCameraData()
+        private UniversalAdditionalCameraData GetBattleCameraData()
         {
-            var mainCam = Camera.main;
-            if (mainCam == null)
+            var baseCamera = battleCamera != null ? battleCamera : Camera.main;
+            if (baseCamera == null)
             {
-                Debug.LogError("Main Camera is null. Ensure a camera is tagged 'MainCamera' and active in the scene.");
+                Debug.LogError("Main Camera is null. Ensure a camera is tagged 'MainCamera' and active in the battle scene.");
                 return null;
             }
 
-            return CameraExtensions.GetUniversalAdditionalCameraData(mainCam);
+            return CameraExtensions.GetUniversalAdditionalCameraData(baseCamera);
         }
 
         private void SetEnableVisualNovelCamera(bool isEnabled)
         {
-            if (_cameraManager.Camera != null)
+            if (cameraManager.Camera != null)
             {
-                _cameraManager.Camera.enabled = isEnabled;
+                cameraManager.Camera.enabled = isEnabled;
             }
 
-            if (_cameraConfiguration.UseUICamera && _cameraManager.UICamera != null)
+            if (cameraConfiguration.UseUICamera && cameraManager.UICamera != null)
             {
-                _cameraManager.UICamera.enabled = isEnabled;
+                cameraManager.UICamera.enabled = isEnabled;
             }
         }
 
         private void SetVisualNovelCameraToOverlay()
         {
-            var vnCameraData = CameraExtensions.GetUniversalAdditionalCameraData(_cameraManager.Camera);
+            if (cameraManager.Camera == null)
+            {
+                return;
+            }
+
+            var vnCameraData = CameraExtensions.GetUniversalAdditionalCameraData(cameraManager.Camera);
             vnCameraData.renderType = CameraRenderType.Overlay;
 
-            if (_cameraConfiguration.UseUICamera)
+            if (cameraConfiguration.UseUICamera && cameraManager.UICamera != null)
             {
-                var vnUICameraData = CameraExtensions.GetUniversalAdditionalCameraData(_cameraManager.UICamera);
+                var vnUICameraData = CameraExtensions.GetUniversalAdditionalCameraData(cameraManager.UICamera);
                 vnUICameraData.renderType = CameraRenderType.Overlay;
             }
         }
@@ -215,36 +207,41 @@ namespace NovastraTest
         {
             SetEnableVisualNovelCamera(false);
 
-            var mainCameraStack = GetMainCameraData().cameraStack;
-            if (mainCameraStack.Contains(_cameraManager.Camera))
+            var mainCameraData = GetBattleCameraData();
+            if (mainCameraData == null)
             {
-                mainCameraStack.Remove(_cameraManager.Camera);
+                return;
             }
 
-            if (_cameraConfiguration.UseUICamera && mainCameraStack.Contains(_cameraManager.UICamera))
+            var mainCameraStack = mainCameraData.cameraStack;
+            RemoveInvalidStackCameras(mainCameraStack);
+
+            if (cameraManager.Camera != null && mainCameraStack.Contains(cameraManager.Camera))
             {
-                mainCameraStack.Remove(_cameraManager.UICamera);
+                mainCameraStack.Remove(cameraManager.Camera);
             }
+
+            if (cameraConfiguration.UseUICamera &&
+                cameraManager.UICamera != null &&
+                mainCameraStack.Contains(cameraManager.UICamera))
+            {
+                mainCameraStack.Remove(cameraManager.UICamera);
+            }
+
+            RemoveInvalidStackCameras(mainCameraStack);
         }
 
-        #endregion
+        private void RemoveInvalidStackCameras(System.Collections.Generic.List<Camera> cameraStack)
+        {
+            cameraStack.RemoveAll(camera => camera == null);
+        }
 
         private void OnInitializeFinished()
         {
             CheckDependencies();
             SetupVisualNovelCamera();
 
-            _stateManager?.ResetState();
-        }
-
-        public void OnEvent(OnChangeBattleState e)
-        {
-            if (e.battleState == BattleState.VisualNovelPause)
-            {
-                startingScript = BattleManager.Instance.BattleStartingScript;
-                StartVisualNovel(startingScript);
-            }
+            stateManager.ResetState().Forget();
         }
     }
-
 }
