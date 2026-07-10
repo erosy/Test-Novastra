@@ -11,6 +11,8 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
+!Packages/com.elringus.naninovel/Editor/Build/
+!Packages/com.elringus.naninovel/Editor/Build/**
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
