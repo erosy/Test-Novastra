@@ -12,8 +12,8 @@ namespace NovastraTest
         IEventListener<OnChangeBattleState>
     {
         private const float DangerHealthThreshold = 0.3f;
-        private const float DamageFadeInDuration = 0.05f;
-        private const float DamageFadeOutDuration = 0.2f;
+        private const float DamageFadeInDuration = 0.02f;
+        private const float DamageFadeOutDuration = 0.18f;
         private const float HealFadeInDuration = 0.1f;
         private const float HealFadeOutDuration = 0.35f;
         private const float DangerFadeDuration = 0.25f;

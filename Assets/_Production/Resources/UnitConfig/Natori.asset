@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4064514e34f47d41b44067bdcbf6c63, type: 3}
   m_Name: Natori
   m_EditorClassIdentifier: Assembly-CSharp::NovastraTest.UnitConfig
-  id: unit-player-2
-  unitName: Player-2
+  id: unit-natori
+  unitName: Natori
   unitPrefab: {fileID: 5365601737411393520, guid: 9a6cada10f8e66241b444eb3d2b5b09e, type: 3}
   unitSprite: {fileID: 0}
   visualPrefab: {fileID: 8105203131956509978, guid: 75ea643df7851af4b939424b7eb7e8f2, type: 3}

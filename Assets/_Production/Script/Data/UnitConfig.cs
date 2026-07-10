@@ -29,6 +29,8 @@ namespace NovastraTest
         public IReadOnlyList<StatProperty> Properties => properties;
         public IReadOnlyList<SkillConfig> Skills => skills;
 
+        public string UnitName => string.IsNullOrWhiteSpace(unitName) ? name : unitName;
+
         public GameObject UnitPrefab => unitPrefab;
         public GameObject VisualPrefab => visualPrefab;
         public Vector3 VisualLocalPosition => visualLocalPosition;

@@ -25,6 +25,51 @@ namespace NovastraTest
         private readonly List<TurnEntry> timeline = new();
         public IReadOnlyList<TurnEntry> Timeline => timeline;
 
+        public IReadOnlyList<Unit> GetTurnPreview(int count)
+        {
+            if (count <= 0)
+            {
+                return Array.Empty<Unit>();
+            }
+
+            var simulatedTimeline = timeline
+                .Where(entry => entry.Unit != null && entry.Unit.IsAlive)
+                .Select(entry => new SimulatedTurnEntry(entry.Unit, entry.CurrentActionValue, entry.BaseActionValue))
+                .ToList();
+
+            if (simulatedTimeline.Count == 0)
+            {
+                return Array.Empty<Unit>();
+            }
+
+            List<Unit> preview = new(count);
+
+            for (int turnIndex = 0; turnIndex < count; turnIndex++)
+            {
+                var nextEntry = simulatedTimeline[0];
+
+                for (int entryIndex = 1; entryIndex < simulatedTimeline.Count; entryIndex++)
+                {
+                    if (simulatedTimeline[entryIndex].CurrentActionValue < nextEntry.CurrentActionValue)
+                    {
+                        nextEntry = simulatedTimeline[entryIndex];
+                    }
+                }
+
+                float elapsedActionValue = nextEntry.CurrentActionValue;
+
+                foreach (var entry in simulatedTimeline)
+                {
+                    entry.CurrentActionValue = Math.Max(0f, entry.CurrentActionValue - elapsedActionValue);
+                }
+
+                preview.Add(nextEntry.Unit);
+                nextEntry.CurrentActionValue = nextEntry.BaseActionValue;
+            }
+
+            return preview;
+        }
+
         public void SetCurrentUnit(Unit unit)
         {
             CurrentUnit = unit;
@@ -138,5 +183,19 @@ namespace NovastraTest
         public float CurrentActionValue;
 
         public float BaseActionValue => 10000f / Math.Max(1f, Unit.Speed);
+    }
+
+    internal sealed class SimulatedTurnEntry
+    {
+        public Unit Unit { get; }
+        public float CurrentActionValue { get; set; }
+        public float BaseActionValue { get; }
+
+        public SimulatedTurnEntry(Unit unit, float currentActionValue, float baseActionValue)
+        {
+            Unit = unit;
+            CurrentActionValue = currentActionValue;
+            BaseActionValue = baseActionValue;
+        }
     }
 }

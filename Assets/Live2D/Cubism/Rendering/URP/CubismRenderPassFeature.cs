@@ -729,20 +729,18 @@ namespace Live2D.Cubism.Rendering.URP
                     _blitRenderTextureMaterial = new Material(CubismBuiltinMaterials.UnlitBlit);
                 }
 
-#if UNITY_EDITOR
-                // HACK: In the editor, Scene view camera may not have the latest texture data.
-                if (data.CameraData.isSceneViewCamera)
-                {
-                    _commandBuffer.Blit(data.CameraTextureHandle, data.CommonRenderingTextureHandle);
-                }
-#endif
+                // Seed the Cubism intermediate texture with the current camera color.
+                // The pass later blits this full-screen texture back to the camera.
+                // If the intermediate texture starts transparent, some URP targets
+                // can composite those transparent pixels as black and overwrite the
+                // camera background.
+                _commandBuffer.Blit(data.CameraTextureHandle, data.CommonRenderingTextureHandle);
 
                 // Sort the renderers by their sorting order.
                 SortingRendererGroups(data);
 
-                // Set render target with both color and depth buffers for proper depth testing
+                // Set render target with both color and depth buffers for proper depth testing.
                 _commandBuffer.SetRenderTarget(data.CommonRenderingTextureHandle, data.CameraDepthTextureHandle);
-                _commandBuffer.ClearRenderTarget(false, true, Color.clear);
 
                 // Draw the objects.
                 DrawObjects(_commandBuffer, data);
