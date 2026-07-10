@@ -254,6 +254,7 @@ namespace NovastraTest
             var targetCandidates = BattleManager.Instance.GetValidTargets(caster, selectedSkill);
 
             targetingManager.BeginTargeting(caster, selectedSkill, targetCandidates);
+            targetingManager.SelectRandom();
 
             if (!targetingManager.HasValidSelection)
             {

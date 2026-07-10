@@ -56,6 +56,15 @@ namespace NovastraTest
             MoveSelection(-1);
         }
 
+        public void SelectRandom()
+        {
+            if (CurrentSkill == null || candidates.Count <= 1) return;
+            if (CurrentSkill.TargetingType == TargetingType.AllTargets || CurrentSkill.TargetingType == TargetingType.Self) return;
+
+            selectedIndex = Random.Range(0, candidates.Count);
+            RefreshSelectedTargets();
+        }
+
         public List<Unit> GetSelectedTargets()
         {
             return selectedTargets.ToList();
